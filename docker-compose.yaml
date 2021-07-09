@@ -1,0 +1,23 @@
+version: '3.6'
+services:
+  exist:
+    image: existdb/existdb:release
+    container_name: exist
+    ports:
+       - 8080:8080
+       - 8443:8443
+    networks:
+      - www
+  web:
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - exist
+    networks:
+      - www
+networks:
+  www:
+    name: www
+    driver: bridge
+
