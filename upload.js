@@ -3,9 +3,11 @@ const { getPostData } = require('./utils')
 var Connection = require("./index.js");
 
 var options = {
-    // host: "192.168.48.2",
-    host: "localhost",
-    port: 8443,
+    host: "192.168.96.2",
+	//This is port for local
+    //port: 8443,
+	//This is port for docker compose
+	port: 8080,
     rest: "/exist/rest",
     auth: "admin:"
 };

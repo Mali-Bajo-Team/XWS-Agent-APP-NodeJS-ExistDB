@@ -4,7 +4,7 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY ["lib", "index.js", "klasik.xml", "./"]
+COPY ["lib", "index.js", "utils.js", "report.xml", "./"]
 
 RUN npm install --production
 
